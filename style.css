@@ -1,4 +1,4 @@
-* {
+ * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -9,7 +9,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  min-height: 100vh;
   background-image: linear-gradient(
     to bottom right,
     #000000 0%,
@@ -35,9 +35,10 @@ header p {
 }
 
 section {
-  padding: 45px;
+  padding: 3rem;
   background-color: black;
-  width: 350px;
+  width: 90%;
+  max-width: 400px;
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -50,32 +51,55 @@ section {
 
 header img {
   width: 150px;
+  height: 185px;  
   border-radius: 10px;
+  object-fit: cover;
 }
 
 header h3 {
   color: green;
-  font-size: 1.35rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
 }
 
 main {
   display: flex;
   flex-direction: column;
   width: 100%;
-  gap: 25px;
+  gap: 1.5rem;
 }
 
 main a {
   background: #adff2f;
-  padding: 15px 0;
+  padding: 1rem 0;
   text-decoration: none;
   color: #000;
   border-radius: 3px;
-  box-shadow: 10px 10px #556b2f;
-  transition: all 0.5s ease-in-out;
-  text-decoration: none;
+  box-shadow: 5px 5px #556b2f;
+  transition: all 0.3s ease-in-out;
 }
 
 main a:hover {
   opacity: 0.85;
+}
+
+@media (max-width: 480px) {
+  section {
+    padding: 2rem;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  header img {
+    width: 120px;
+    height: 120px;
+  }
+
+  main a {
+    padding: 0.8rem 0;
+  }
+
+  header h3 {
+    font-size: 1.25rem;
+  }
 }
